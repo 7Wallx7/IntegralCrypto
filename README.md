@@ -31,10 +31,10 @@
       * [2. Organizational Analysis of the Sector](#OrganizationalAnalysisoftheSector)        
 
 
-**[2. Analysis and relevance](#Analysisandrelevance)**
+  * [2. Analysis and relevance](#Analysisandrelevance)
 
-  * [1. Software Requirements](#SoftwareRequirements)
-  * [2. Applicable tools](#ApplicableTools)
+      * [1. Software Requirements](#SoftwareRequirements)
+      * [2. Applicable tools](#ApplicableTools)
 
 # IntegralCrypto
 A platform where you will find all the necessary tools for a good cryptocurrency analysis.
