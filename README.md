@@ -23,7 +23,8 @@ A platform where you will find all the necessary tools for a good cryptocurrency
 
 The project focuses on the development of a web platform dedicated to cryptocurrency tracking and management. This platform will provide users with a wide range of tools and features to meet their needs related to the cryptocurrency market, as well as to foster social interaction and knowledge sharing among users.
 
-## 1.1. State of the Art <a id="StateoftheArt"></a>
+<a id="StateoftheArt"></a>
+## 1.1. State of the Art 
 
 ### 1.1.1. Classification of companies <a id="Classificationofcompanies"></a>
 
