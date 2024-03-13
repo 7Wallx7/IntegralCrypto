@@ -108,10 +108,10 @@ In summary, the cryptocurrency web platform development project presents a signi
       * [2. Análisis organizativo del sector](#AnálisisOrganizativoSector)        
 
 
-**[2. Análisis y relevancia](#AnálisisRelevancia)**
+  * [2. Análisis y relevancia](#AnálisisRelevancia)
 
-  * [1. Requisitos de software](#RequerimientosSoftware)
-  * [2. Herramientas aplicables](#HerramientasAplicables)
+      * [1. Requisitos de software](#RequerimientosSoftware)
+      * [2. Herramientas aplicables](#HerramientasAplicables)
 
 # IntegralCrypto
 Una plataforma donde encontrarás todas las herramientas necesarias para un buen análisis de criptodivisas.
