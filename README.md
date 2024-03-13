@@ -1,3 +1,8 @@
+# Mission
+
+## Comprehensive centralized platform for analysis and tracking
+
+
 # Future implementations
 
 * Track your portfolios by API via exchange or metamask or manually. As well as performance and percentage of value of the different assets in your portfolio.
@@ -67,6 +72,10 @@ Required Skills: The skills required for the development of the platform include
 In summary, the cryptocurrency web platform development project presents a significant opportunity to deliver value to users by providing comprehensive tools and services for cryptocurrency tracking and management, as well as fostering social interaction and knowledge sharing within the crypto community. A thorough understanding of the industry needs, business opportunities and required competencies is essential to the success of the project.
 
 # Traducción Español.
+
+# Misión
+
+## Plataforma centralizada integral  para un analisis y seguimiento
 
 # Implementaciones futuras
 
