@@ -11,6 +11,8 @@
 * Indicators for further personal analysis, such as fear and greed indicator, liquidation map or heatmap.
 * Transaction tracking by TXID
 * Community chat as well as a forum for different discussions.
+* Financial education section
+
 
 
 
@@ -85,7 +87,7 @@ I* ntercambio en diferentes Casa de cambios centrarilzadas o descentralizadas
 * Indicadores para un posterior analisis personal, como indicador de miedo y codicia, mapa de liquidaciones o heatmap.
 * Seguimiento de las transacciones por TXID
 * Chat de la comunidad asi como un foro para diferentes discuciones
-
+* Apartado de/sobre Educación financiera
 
 
 ## Índice
