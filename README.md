@@ -1,3 +1,15 @@
+# Future implementations
+
+* Track your portfolios by API via exchange or metamask or manually. As well as performance and percentage of value of the different assets in your portfolio.
+* Listing of currency prices by capitalization or categories.
+* exchange in different centralized or decentralized exchange houses
+* Indicators for further personal analysis, such as fear and greed indicator, liquidation map or heatmap.
+* Transaction tracking by TXID
+* Community chat as well as a forum for different discussions.
+
+
+
+
 ## Index
 
 **[1. Introduction](#introduction)**
@@ -55,6 +67,17 @@ Required Skills: The skills required for the development of the platform include
 In summary, the cryptocurrency web platform development project presents a significant opportunity to deliver value to users by providing comprehensive tools and services for cryptocurrency tracking and management, as well as fostering social interaction and knowledge sharing within the crypto community. A thorough understanding of the industry needs, business opportunities and required competencies is essential to the success of the project.
 
 # Traducción Español.
+
+# Implementaciones futuras
+
+* Seguimiento de tus carteras por API via exchange o metamask o manualmente. Asi como rendimiento del mismo y porcentaje de valor de los diferentes activos en tu cartera
+* Listado de precios de monedas  por capitalizacion o categorias
+I* ntercambio en diferentes Casa de cambios centrarilzadas o descentralizadas
+* Indicadores para un posterior analisis personal, como indicador de miedo y codicia, mapa de liquidaciones o heatmap.
+* Seguimiento de las transacciones por TXID
+* Chat de la comunidad asi como un foro para diferentes discuciones
+
+
 
 ## Índice
 
