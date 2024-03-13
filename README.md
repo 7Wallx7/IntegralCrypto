@@ -46,7 +46,8 @@ Identification of Industry Needs: Identified industry needs include the need for
 
 Business Opportunity Analysis: The project has the opportunity to capitalize on the growing popularity of cryptocurrencies by offering a platform that meets the identified needs. In addition to the potential revenue generated from advertising, premium subscriptions and transaction fees, the platform can leverage business opportunities by creating an active and engaged community, which can be monetized through strategic partnerships and premium content offerings.
 
-## 2.2. Applicable tools <a name="ApplicableTools"></a>
+<a name="ApplicableTools"></a>
+## 2.2. Applicable tools 
 Gathering Relevant Information: It is critical to gather information on best practices in web development, cryptocurrency API integration, data analysis tools, user management and IT security. This collection will help guide the effective design and development of the platform, ensuring that it meets the expectations and needs of users.
 
 Required Skills: The skills required for the development of the platform include web development skills (HTML, CSS, JavaScript, frameworks such as React.js or Angular), database skills for secure storage of user and transaction information, experience in integrating cryptocurrency APIs to obtain real-time market data, and understanding of IT security principles to protect the platform and user data against potential threats and vulnerabilities.
@@ -57,45 +58,50 @@ In summary, the cryptocurrency web platform development project presents a signi
 
 ## Índice
 
-**[1. Introducción](#introduction)**
+**[1. Introducción](#Introducción)**
 
-  * [1. Estado del arte](#StateoftheArt)
+  * [1. Estado del arte](#EstadoArte)
 
-      * [1. Clasificación de las empresas](#Classificationofcompanies)
-      * [2. Análisis organizativo del sector](#OrganizationalAnalysisoftheSector)        
+      * [1. Clasificación de las empresas](#ClasificaciónEmpresas)
+      * [2. Análisis organizativo del sector](#AnálisisOrganizativoSector)        
 
 
-**[2. Análisis y relevancia](#Analysisandrelevance)**
+**[2. Análisis y relevancia](#AnálisisRelevancia)**
 
-  * [1. Requisitos de software](#SoftwareRequirements)
-  * [2. Herramientas aplicables](#ApplicableTools)
+  * [1. Requisitos de software](#RequerimientosSoftware)
+  * [2. Herramientas aplicables](#HerramientasAplicables)
 
 # IntegralCrypto
 Una plataforma donde encontrarás todas las herramientas necesarias para un buen análisis de criptodivisas.
 
 
+<a name="Introducción"></a>
 # 1. Introducción
 
 El proyecto se centra en el desarrollo de una plataforma web dedicada al seguimiento y gestión de criptomonedas. Esta plataforma proporcionará a los usuarios una amplia gama de herramientas y características para satisfacer sus necesidades relacionadas con el mercado de criptomonedas, así como para fomentar la interacción social y el intercambio de conocimientos entre los usuarios.
 
 ## 1.1. Estado del arte
-
+<a name="EstadoArte"></a>
 ### 1.1.1. Clasificación de las empresas
 
 En el sector de las criptomonedas, las empresas se clasifican según sus estructuras organizativas y los productos/servicios que ofrecen. Esto incluye intercambios de criptomonedas, plataformas de seguimiento de precios, billeteras digitales, servicios de análisis de mercado, entre otros. La necesidad de una plataforma como la propuesta surge de la demanda de los usuarios de contar con una herramienta integral que les permita seguir de cerca el mercado de criptomonedas, gestionar sus inversiones y participar en la comunidad criptográfica.
 
+<a name="AnálisisOrganizativoSector"></a>
 ### 1.1.2. Análisis Organizativo del Sector
 
 Las empresas relacionadas con las criptomonedas suelen tener una estructura organizativa ágil y adaptable. Los departamentos clave incluyen desarrollo de software, análisis de datos, atención al cliente, marketing y gestión de productos. Cada departamento desempeña un papel fundamental en el desarrollo y mantenimiento de plataformas y servicios que satisfagan las necesidades de los usuarios y se adapten a las rápidas fluctuaciones del mercado.
 
+<a name="AnálisisRelevancia"></a>
 # 2. Análisis y relevancia
 
+<a name="RequerimientosSoftware"></a>
 ## 2.1. Requerimientos del software
 
 Identificación de Necesidades del Sector: Las necesidades identificadas en el sector incluyen la necesidad de una plataforma integral que permita a los usuarios seguir el mercado de criptomonedas, gestionar sus inversiones, interactuar socialmente y acceder a contenido educativo y de análisis. La demanda de estas funcionalidades es alta debido al creciente interés en las criptomonedas como clase de activos y al deseo de los usuarios de estar informados y conectados.
 
 Análisis de Oportunidades de Negocio: El proyecto tiene la oportunidad de capitalizar la creciente popularidad de las criptomonedas ofreciendo una plataforma que satisfaga las necesidades identificadas. Además de los ingresos potenciales generados por publicidad, suscripciones premium y comisiones por transacciones, la plataforma puede aprovechar las oportunidades de negocio mediante la creación de una comunidad activa y comprometida, la cual puede ser monetizada a través de asociaciones estratégicas y ofertas de contenido premium.
 
+<a name="HerramientasAplicables"></a>
 ## 2.2. Herramientas aplicables
 
 Recopilación de Información Relevante: Es fundamental recopilar información sobre las mejores prácticas en desarrollo web, integración de APIs de criptomonedas, herramientas de análisis de datos, gestión de usuarios y seguridad informática. Esta recopilación ayudará a guiar el diseño y desarrollo efectivo de la plataforma, asegurando que cumpla con las expectativas y necesidades de los usuarios.
