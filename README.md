@@ -13,7 +13,7 @@
 * Community chat as well as a forum for different discussions.
 * Financial education section
 * Relevant industry news
-
+* Telegram Bot where you will send any uploads in certain sections
 
 
 
@@ -84,13 +84,14 @@ In summary, the cryptocurrency web platform development project presents a signi
 
 * Seguimiento de tus carteras por API via exchange o metamask o manualmente. Asi como rendimiento del mismo y porcentaje de valor de los diferentes activos en tu cartera
 * Listado de precios de monedas  por capitalizacion o categorias
-I* ntercambio en diferentes Casa de cambios centrarilzadas o descentralizadas
+* Intercambio en diferentes Casa de cambios centrarilzadas o descentralizadas
 * Indicadores para un posterior analisis personal, como indicador de miedo y codicia, mapa de liquidaciones o heatmap.
 * Seguimiento de las transacciones por TXID
 * Chat de la comunidad asi como un foro para diferentes discuciones
 * Apartado de/sobre Educación financiera
 * Noticias relevantes del sector
-
+* Bot Telegram donde enviará cualquier subida en determinados apartados
+  
 ## Índice
 
 **[1. Introducción](#Introducción)**
