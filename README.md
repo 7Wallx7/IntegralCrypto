@@ -26,18 +26,21 @@ The project focuses on the development of a web platform dedicated to cryptocurr
 <a id="StateoftheArt"></a>
 ## 1.1. State of the Art 
 
-### 1.1.1. Classification of companies <a id="Classificationofcompanies"></a>
+<a id="Classificationofcompanies"></a>
+### 1.1.1. Classification of companies 
 
 In the cryptocurrency industry, companies are classified according to their organizational structures and the products/services they offer. This includes cryptocurrency exchanges, price tracking platforms, digital wallets, market analysis services, among others. The need for a platform such as the one proposed arises from users' demand for a comprehensive tool that allows them to closely follow the cryptocurrency market, manage their investments and participate in the crypto community.
 
-
-### 1.1.2.  Organizational Analysis of the Sector <a id="OrganizationalAnalysisoftheSector"></a>
+<a id="OrganizationalAnalysisoftheSector"></a>
+### 1.1.2.  Organizational Analysis of the Sector 
 
 Cryptocurrency-related companies typically have an agile and adaptable organizational structure. Key departments include software development, data analytics, customer support, marketing, and product management. Each department plays a key role in developing and maintaining platforms and services that meet user needs and adapt to rapid market fluctuations.
 
-# 2. Analysis and relevance <a id="Analysisandrelevance"></a>
+<a id="Analysisandrelevance"></a>
+# 2. Analysis and relevance 
 
-## 2.1. Software Requirements <a id="SoftwareRequirements"></a>
+<a id="SoftwareRequirements"></a>
+## 2.1. Software Requirements 
 
 Identification of Industry Needs: Identified industry needs include the need for a comprehensive platform that allows users to follow the cryptocurrency market, manage their investments, interact socially, and access educational and analytics content. Demand for these functionalities is high due to the growing interest in cryptocurrencies as an asset class and users' desire to be informed and connected.
 
