@@ -6,14 +6,17 @@
 # Future implementations
 
 * Track your portfolios by API via exchange or metamask or manually. As well as performance and percentage of value of the different assets in your portfolio.
-* Listing of currency prices by capitalization or categories.
-* exchange in different centralized or decentralized exchange houses
+* List of currency prices by capitalization or categories.
+* Exchange in different centralized or decentralized exchanges.
 * Indicators for further personal analysis, such as fear and greed indicator, liquidation map or heatmap.
 * Transaction tracking by TXID
 * Community chat as well as a forum for different discussions.
 * Financial education section
 * Relevant industry news
 * Telegram Bot where you will send any uploads in certain sections
+* Information about Airdrops, with tutorials on how to do it.
+* Whale portfolio tracking 
+* Calendar of ICO's with information about each one of them.
 
 
 
@@ -91,6 +94,9 @@ In summary, the cryptocurrency web platform development project presents a signi
 * Apartado de/sobre Educación financiera
 * Noticias relevantes del sector
 * Bot Telegram donde enviará cualquier subida en determinados apartados
+* Información sobre Airdrops, con tutoriales de como hacerlo
+* Seguimiento de carteras de Ballenas 
+*  Calendario de ICO's con informacion de cada una de ellas
   
 ## Índice
 
