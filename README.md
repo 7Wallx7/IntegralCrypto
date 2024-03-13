@@ -12,6 +12,7 @@
 * Transaction tracking by TXID
 * Community chat as well as a forum for different discussions.
 * Financial education section
+* Relevant industry news
 
 
 
@@ -88,7 +89,7 @@ I* ntercambio en diferentes Casa de cambios centrarilzadas o descentralizadas
 * Seguimiento de las transacciones por TXID
 * Chat de la comunidad asi como un foro para diferentes discuciones
 * Apartado de/sobre Educación financiera
-
+* Noticias relevantes del sector
 
 ## Índice
 
