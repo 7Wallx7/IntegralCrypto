@@ -17,6 +17,7 @@
 * Information about Airdrops, with tutorials on how to do it.
 * Whale portfolio tracking 
 * Calendar of ICO's with information about each one of them.
+* Trends Google with Bitcoin
 
 
 
@@ -97,6 +98,7 @@ In summary, the cryptocurrency web platform development project presents a signi
 * Información sobre Airdrops, con tutoriales de como hacerlo
 * Seguimiento de carteras de Ballenas 
 *  Calendario de ICO's con informacion de cada una de ellas
+*  Trends Google con Bitcoin
   
 ## Índice
 
