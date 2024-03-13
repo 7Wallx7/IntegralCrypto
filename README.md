@@ -11,7 +11,7 @@
 **[2. Analysis and relevance](#Analysisandrelevance)**
 
   * [1. Software Requirements](#SoftwareRequirements)
-  * [2. Software Requirements](#ApplicableTools)
+  * [2. Applicable tools](#ApplicableTools)
 
 # IntegralCrypto
 A platform where you will find all the necessary tools for a good cryptocurrency analysis.
@@ -54,6 +54,21 @@ Required Skills: The skills required for the development of the platform include
 In summary, the cryptocurrency web platform development project presents a significant opportunity to deliver value to users by providing comprehensive tools and services for cryptocurrency tracking and management, as well as fostering social interaction and knowledge sharing within the crypto community. A thorough understanding of the industry needs, business opportunities and required competencies is essential to the success of the project.
 
 # Traducción Español.
+
+## Índice
+
+**[1. Introducción](#introduction)**
+
+  * [1. Estado del arte](#StateoftheArt)
+
+      * [1. Clasificación de las empresas](#Classificationofcompanies)
+      * [2. Análisis organizativo del sector](#OrganizationalAnalysisoftheSector)        
+
+
+**[2. Análisis y relevancia](#Analysisandrelevance)**
+
+  * [1. Requisitos de software](#SoftwareRequirements)
+  * [2. Herramientas aplicables](#ApplicableTools)
 
 # IntegralCrypto
 Una plataforma donde encontrarás todas las herramientas necesarias para un buen análisis de criptodivisas.
