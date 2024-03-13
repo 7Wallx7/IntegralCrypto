@@ -1,3 +1,13 @@
+# Index
+## 1. Introduction
+### 1.1. State of the Art
+#### 1.1.1. Classification of companies
+#### 1.1.2.  Organizational Analysis of the Sector
+
+## 2. Analysis and relevance
+### 2.1. Software Requirements
+#### 2.1. Software Requirements
+#### 2.2. Applicable tools
 # IntegralCrypto
 A platform where you will find all the necessary tools for a good cryptocurrency analysis.
 
