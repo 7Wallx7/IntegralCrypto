@@ -1,43 +1,44 @@
 # Index
-## 1. Introduction
-### 1.1. State of the Art
-#### 1.1.1. Classification of companies
-#### 1.1.2.  Organizational Analysis of the Sector
+1. [Introduction](#introduction)
+    1. [State of the Art](#StateoftheArt)
+            1. [Classification of companies](#Classificationofcompanies)
+            2. [Organizational Analysis of the Sector](#OrganizationalAnalysisoftheSector)
+2. [Analysis and relevance](#Analysisandrelevance)
+    1. [Software Requirements](#SoftwareRequirements)
+    2. [2.1. Software Requirements](#ApplicableTools)
+3. [Applicable tools](#ApplicableTools)
 
-## 2. Analysis and relevance
-### 2.1. Software Requirements
-#### 2.1. Software Requirements
-#### 2.2. Applicable tools
+
 # IntegralCrypto
 A platform where you will find all the necessary tools for a good cryptocurrency analysis.
 
 
 
 
-# 1. Introduction
+# 1. Introduction <a name="introduction"></a>
 
 The project focuses on the development of a web platform dedicated to cryptocurrency tracking and management. This platform will provide users with a wide range of tools and features to meet their needs related to the cryptocurrency market, as well as to foster social interaction and knowledge sharing among users.
 
-## 1.1. State of the Art
+## 1.1. State of the Art <a name="StateoftheArt"></a>
 
-### 1.1.1. Classification of companies
+### 1.1.1. Classification of companies <a name="Classificationofcompanies"></a>
 
 In the cryptocurrency industry, companies are classified according to their organizational structures and the products/services they offer. This includes cryptocurrency exchanges, price tracking platforms, digital wallets, market analysis services, among others. The need for a platform such as the one proposed arises from users' demand for a comprehensive tool that allows them to closely follow the cryptocurrency market, manage their investments and participate in the crypto community.
 
 
-### 1.1.2.  Organizational Analysis of the Sector
+### 1.1.2.  Organizational Analysis of the Sector <a name="OrganizationalAnalysisoftheSector"></a>
 
 Cryptocurrency-related companies typically have an agile and adaptable organizational structure. Key departments include software development, data analytics, customer support, marketing, and product management. Each department plays a key role in developing and maintaining platforms and services that meet user needs and adapt to rapid market fluctuations.
 
-# 2. Analysis and relevance
+# 2. Analysis and relevance <a name="Analysisandrelevance"></a>
 
-## 2.1. Software Requirements
+## 2.1. Software Requirements <a name="SoftwareRequirements"></a>
 
 Identification of Industry Needs: Identified industry needs include the need for a comprehensive platform that allows users to follow the cryptocurrency market, manage their investments, interact socially, and access educational and analytics content. Demand for these functionalities is high due to the growing interest in cryptocurrencies as an asset class and users' desire to be informed and connected.
 
 Business Opportunity Analysis: The project has the opportunity to capitalize on the growing popularity of cryptocurrencies by offering a platform that meets the identified needs. In addition to the potential revenue generated from advertising, premium subscriptions and transaction fees, the platform can leverage business opportunities by creating an active and engaged community, which can be monetized through strategic partnerships and premium content offerings.
 
-## 2.2. Applicable tools
+## 2.2. Applicable tools <a name="ApplicableTools"></a>
 Gathering Relevant Information: It is critical to gather information on best practices in web development, cryptocurrency API integration, data analysis tools, user management and IT security. This collection will help guide the effective design and development of the platform, ensuring that it meets the expectations and needs of users.
 
 Required Skills: The skills required for the development of the platform include web development skills (HTML, CSS, JavaScript, frameworks such as React.js or Angular), database skills for secure storage of user and transaction information, experience in integrating cryptocurrency APIs to obtain real-time market data, and understanding of IT security principles to protect the platform and user data against potential threats and vulnerabilities.
