@@ -1,9 +1,9 @@
-# Index
-** [Introduction](#introduction)
+## Index
+**[Introduction](#introduction)**
     * [State of the Art](#StateoftheArt)
         * [1. Classification of companies](#Classificationofcompanies)
         * [2. Organizational Analysis of the Sector](#OrganizationalAnalysisoftheSector)
-** [Analysis and relevance](#Analysisandrelevance)
+**[Analysis and relevance](#Analysisandrelevance)**
     * [1. Software Requirements](#SoftwareRequirements)
     * [2. Software Requirements](#ApplicableTools)
 
