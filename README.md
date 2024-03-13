@@ -19,24 +19,24 @@ A platform where you will find all the necessary tools for a good cryptocurrency
 
 
 
-# 1. Introduction <a name="introduction"></a>
+# 1. Introduction <a id="introduction"></a>
 
 The project focuses on the development of a web platform dedicated to cryptocurrency tracking and management. This platform will provide users with a wide range of tools and features to meet their needs related to the cryptocurrency market, as well as to foster social interaction and knowledge sharing among users.
 
-## 1.1. State of the Art <a name="StateoftheArt"></a>
+## 1.1. State of the Art <a id="StateoftheArt"></a>
 
-### 1.1.1. Classification of companies <a name="Classificationofcompanies"></a>
+### 1.1.1. Classification of companies <a id="Classificationofcompanies"></a>
 
 In the cryptocurrency industry, companies are classified according to their organizational structures and the products/services they offer. This includes cryptocurrency exchanges, price tracking platforms, digital wallets, market analysis services, among others. The need for a platform such as the one proposed arises from users' demand for a comprehensive tool that allows them to closely follow the cryptocurrency market, manage their investments and participate in the crypto community.
 
 
-### 1.1.2.  Organizational Analysis of the Sector <a name="OrganizationalAnalysisoftheSector"></a>
+### 1.1.2.  Organizational Analysis of the Sector <a id="OrganizationalAnalysisoftheSector"></a>
 
 Cryptocurrency-related companies typically have an agile and adaptable organizational structure. Key departments include software development, data analytics, customer support, marketing, and product management. Each department plays a key role in developing and maintaining platforms and services that meet user needs and adapt to rapid market fluctuations.
 
-# 2. Analysis and relevance <a name="Analysisandrelevance"></a>
+# 2. Analysis and relevance <a id="Analysisandrelevance"></a>
 
-## 2.1. Software Requirements <a name="SoftwareRequirements"></a>
+## 2.1. Software Requirements <a id="SoftwareRequirements"></a>
 
 Identification of Industry Needs: Identified industry needs include the need for a comprehensive platform that allows users to follow the cryptocurrency market, manage their investments, interact socially, and access educational and analytics content. Demand for these functionalities is high due to the growing interest in cryptocurrencies as an asset class and users' desire to be informed and connected.
 
