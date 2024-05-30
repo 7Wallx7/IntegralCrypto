@@ -5,11 +5,15 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
-import com.integralCrypto.spring.cryptoCoin.services.external.ApiExternalService;
-import com.integralCrypto.spring.cryptoCoin.services.external.DataProcessService;
+import com.integralCrypto.spring.Coin.services.external.ListSymbolApiExternalService;
+import com.integralCrypto.spring.OHLC.services.external.OHLCDataProcessService;
+import com.integralCrypto.spring.Coin.services.external.ListSymbolDataProcessService;
+
 
 @SpringBootApplication
+@EnableScheduling
 public class IntegralCrypto {
 
     public static void main(String[] args) {
@@ -17,17 +21,18 @@ public class IntegralCrypto {
     }
 
     @Bean
-    public ApplicationRunner initialize(ApiExternalService apiService, DataProcessService processApiData) {
+    public ApplicationRunner initialize(ListSymbolApiExternalService apiService, ListSymbolDataProcessService processApiData, OHLCDataProcessService ohlcdata) {
         return args -> {
             // Llama al método para ejecutar el proceso de datos de la API inmediatamente
-            executeApiDataProcessing(apiService, processApiData);
+           // executeApiDataProcessing(apiService, processApiData);
+            ohlcdata.processApiDataPeriodically();
         };
     }
 
     // Método para ejecutar el proceso de datos de la API inmediatamente
-    private void executeApiDataProcessing(ApiExternalService apiService, DataProcessService processApiData) {
+    private void executeApiDataProcessing(ListSymbolApiExternalService apiService, ListSymbolDataProcessService processApiData) {
         try {
-            String jsonData = apiService.getDataListCoin();
+            String jsonData = apiService.getSymbolCoin();
             processApiData.processApiData(jsonData);
             System.out.println("Data saved to database successfully.");
         } catch (JSONException e) {
