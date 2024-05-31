@@ -11,30 +11,31 @@ import com.integralCrypto.spring.transaction.services.TransactionService;
 
 import jakarta.validation.Valid;
 
-
 @RestController
 @RequestMapping("/transactions")
 @Validated
 public class TransactionController {
 
-    @Autowired
-    private TransactionService transactionService;
+	@Autowired
+	private TransactionService transactionService;
 
-    @PostMapping("/buy")
-    public ResponseEntity<Transaction> registerBuyTransaction(@Valid @RequestBody TransactionDTO transactionDTO) {
-        Transaction transaction = transactionService.registerBuyTransaction(transactionDTO.getPortfolioId(), transactionDTO.getCoinId(), transactionDTO.getAmount(), transactionDTO.getPrice());
-        return ResponseEntity.ok(transaction);
-    }
+	@PostMapping("/buy")
+	public ResponseEntity<Transaction> registerBuyTransaction(@Valid @RequestBody TransactionDTO transactionDTO) {
+		Transaction transaction = transactionService.registerBuyTransaction(transactionDTO.getPortfolioId(),
+				transactionDTO.getCoinId(), transactionDTO.getAmount(), transactionDTO.getPrice());
+		return ResponseEntity.ok(transaction);
+	}
 
-    @PostMapping("/sell")
-    public ResponseEntity<Transaction> registerSellTransaction(@Valid @RequestBody TransactionDTO transactionDTO) {
-        Transaction transaction = transactionService.registerSellTransaction(transactionDTO.getPortfolioId(), transactionDTO.getCoinId(), transactionDTO.getAmount(), transactionDTO.getPrice());
-        return ResponseEntity.ok(transaction);
-    }
-    
-    @DeleteMapping("/{transactionId}")
-    public ResponseEntity<Void> deleteTransaction(@PathVariable Long transactionId) {
-    	transactionService.deleteTransaction(transactionId);
-        return ResponseEntity.noContent().build();
-    }
+	@PostMapping("/sell")
+	public ResponseEntity<Transaction> registerSellTransaction(@Valid @RequestBody TransactionDTO transactionDTO) {
+		Transaction transaction = transactionService.registerSellTransaction(transactionDTO.getPortfolioId(),
+				transactionDTO.getCoinId(), transactionDTO.getAmount(), transactionDTO.getPrice());
+		return ResponseEntity.ok(transaction);
+	}
+
+	@DeleteMapping("/{transactionId}")
+	public ResponseEntity<Void> deleteTransaction(@PathVariable Long transactionId) {
+		transactionService.deleteTransaction(transactionId);
+		return ResponseEntity.noContent().build();
+	}
 }
