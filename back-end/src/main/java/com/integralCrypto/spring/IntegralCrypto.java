@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-import com.integralCrypto.spring.Coin.services.external.ListSymbolApiExternalService;
-import com.integralCrypto.spring.OHLC.services.external.OHLCDataProcessService;
-import com.integralCrypto.spring.Coin.services.external.ListSymbolDataProcessService;
+import com.integralCrypto.spring.coin.services.external.ListSymbolApiExternalService;
+import com.integralCrypto.spring.ohlc.services.external.OHLCDataProcessService;
+import com.integralCrypto.spring.coin.services.external.ListSymbolDataProcessService;
 
 
 @SpringBootApplication
@@ -24,7 +24,7 @@ public class IntegralCrypto {
     public ApplicationRunner initialize(ListSymbolApiExternalService apiService, ListSymbolDataProcessService processApiData, OHLCDataProcessService ohlcdata) {
         return args -> {
             // Llama al método para ejecutar el proceso de datos de la API inmediatamente
-           // executeApiDataProcessing(apiService, processApiData);
+            executeApiDataProcessing(apiService, processApiData);
             ohlcdata.processApiDataPeriodically();
         };
     }
