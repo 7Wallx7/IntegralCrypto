@@ -8,30 +8,30 @@ import org.springframework.web.bind.annotation.RestController;
 
 //for Angular Client (withCredentials)
 //@CrossOrigin(origins = "http://localhost:8081", maxAge = 3600, allowCredentials="true")
-@CrossOrigin(origins = "*")
+@CrossOrigin (origins = "*")
 @RestController
-@RequestMapping("/api/test")
+@RequestMapping ("/api/test")
 public class TestController {
-  @GetMapping("/all")
-  public String allAccess() {
-    return "Public Content.";
-  }
+	@GetMapping ("/all")
+	public String allAccess () {
+		return "Public Content.";
+	}
 
-  @GetMapping("/user")
-  @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
-  public String userAccess() {
-    return "User Content.";
-  }
+	@GetMapping ("/user")
+	@PreAuthorize ("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+	public String userAccess () {
+		return "User Content.";
+	}
 
-  @GetMapping("/mod")
-  @PreAuthorize("hasRole('MODERATOR')")
-  public String moderatorAccess() {
-    return "Moderator Board.";
-  }
+	@GetMapping ("/mod")
+	@PreAuthorize ("hasRole('MODERATOR')")
+	public String moderatorAccess () {
+		return "Moderator Board.";
+	}
 
-  @GetMapping("/admin")
-  @PreAuthorize("hasRole('ADMIN')")
-  public String adminAccess() {
-    return "Admin Board.";
-  }
+	@GetMapping ("/admin")
+	@PreAuthorize ("hasRole('ADMIN')")
+	public String adminAccess () {
+		return "Admin Board.";
+	}
 }

@@ -3,6 +3,7 @@ package com.integralCrypto.spring.coin.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table (name="coin")		
@@ -13,6 +14,7 @@ public class Coin {
 	private Long id;
 
 	@Column(unique = true)
+	@Size (min = 1, max = 15)
 	@NotBlank
 	private String symbol;
 

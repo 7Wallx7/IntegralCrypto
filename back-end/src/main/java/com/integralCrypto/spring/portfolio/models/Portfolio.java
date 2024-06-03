@@ -11,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
 import java.util.List;
@@ -22,6 +23,7 @@ public class Portfolio {
 	private Long id;
 
 	@Size(min = 2, max = 255)
+	@NotEmpty
 	private String name;
 
 	@ManyToOne

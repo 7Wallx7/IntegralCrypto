@@ -1,26 +1,22 @@
 package com.integralCrypto.spring.coin.DTO;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+
 public class CoinDTO {
 
-	private String name;
 
-	private String symbol;
+	@NotEmpty
+	@Size(min = 1, max = 15)
+		private String symbol;
 
 	public CoinDTO () {
 	}
 
-	public CoinDTO (String name, String symbol) {
-		this.name = name;
+	public CoinDTO (String symbol) {
 		this.symbol = symbol;
 	}
 
-	public String getName () {
-		return name;
-	}
-
-	public void setName (String name) {
-		this.name = name;
-	}
 
 	public String getSymbol () {
 		return symbol;
