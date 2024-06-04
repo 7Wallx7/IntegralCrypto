@@ -63,7 +63,7 @@ public class OHLCDataProcessService {
         RateLimiter.decorateRunnable(rateLimiter, () -> {
             try {
                 OHLC ohclUltimo = ohlcRepository.findFirstByCoinOrderByTimestampDesc(coin);
-                String lastTimestamp = (ohclUltimo != null) ? ohclUltimo.getTimestamp() : null;
+                Long lastTimestamp = (ohclUltimo != null) ? ohclUltimo.getTimestamp() : null;
 
                 if (lastTimestamp == null) {
                     System.out.println("No previous OHLC data found for coin: " + coin.getSymbol());
@@ -93,7 +93,7 @@ public class OHLCDataProcessService {
 
                     switch (j) {
                         case 0:
-                            newElement.setTimestamp(element);
+                            newElement.setTimestamp( Long.parseLong(element));
                             break;
                         case 2:
                             newElement.setOpen(new BigDecimal(element));

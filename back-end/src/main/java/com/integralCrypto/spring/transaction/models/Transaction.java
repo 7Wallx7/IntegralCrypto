@@ -41,7 +41,7 @@ public class Transaction {
     private BigDecimal price;
 
 	@NotNull
-    private Timestamp timestamp;
+    private Long timestamp;
 
 	public Long getId() {
 		return id;
@@ -91,11 +91,11 @@ public class Transaction {
 		this.price = price;
 	}
 
-	public Timestamp getTimestamp() {
+	public Long getTimestamp() {
 		return timestamp;
 	}
 
-	public void setTimestamp(Timestamp timestamp) {
+	public void setTimestamp(Long timestamp) {
 		this.timestamp = timestamp;
 	}
 

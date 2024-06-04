@@ -1,7 +1,8 @@
 package com.integralCrypto.spring.transaction.services;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
+import java.time.temporal.ChronoUnit;
+import java.time.Instant;
 import java.util.List;
 
 import com.integralCrypto.spring.transaction.dto.TransactionDTO;
@@ -40,7 +41,7 @@ public class TransactionService {
 		transaction.setType(TransactionType.BUY);
 		transaction.setAmount(amount);
 		transaction.setPrice(price);
-		transaction.setTimestamp(new Timestamp(System.currentTimeMillis()));
+		transaction.setTimestamp(getCurrentUnixTimestampInMinutes());
 
 		return transactionRepository.save(transaction);
 	}
@@ -57,7 +58,7 @@ public class TransactionService {
 		transaction.setType(TransactionType.SELL);
 		transaction.setAmount(amount);
 		transaction.setPrice(price);
-		transaction.setTimestamp(new Timestamp(System.currentTimeMillis()));
+		transaction.setTimestamp(getCurrentUnixTimestampInMinutes());
 
 		return transactionRepository.save(transaction);
 	}
@@ -76,7 +77,7 @@ public class TransactionService {
 		return transactions;
 	}
 
-	public Transaction updateTransaction(Long transactionId, TransactionDTO transactionDTO) {
+	public Transaction updateTransaction (Long transactionId, TransactionDTO transactionDTO) {
 		Transaction transaction = transactionRepository.findById(transactionId)
 				.orElseThrow(() -> new ResourceNotFoundException("Transaction not found"));
 
@@ -90,6 +91,11 @@ public class TransactionService {
 		transaction.setAmount(transactionDTO.getAmount());
 		transaction.setPrice(transactionDTO.getPrice());
 		return transactionRepository.save(transaction);
+	}
+
+	public long getCurrentUnixTimestampInMinutes () {
+		Instant instant = Instant.now();
+		return instant.truncatedTo(ChronoUnit.MINUTES).getEpochSecond();
 	}
 }
 

@@ -21,34 +21,38 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 @RestController
-@RequestMapping("/portfolios")
+@RequestMapping ("/portfolios")
 @Validated
 public class PortfolioController {
 
-    @Autowired
-    private PortfolioService portfolioService;
+	@Autowired
+	private PortfolioService portfolioService;
 
-    @PostMapping("/createPortfolio")
-    public ResponseEntity<Portfolio> createPortfolio(@Valid @RequestBody PortfolioDTO portfolioDTO) {
-        Portfolio portfolio = portfolioService.createPortfolio(portfolioDTO.getUserId(), portfolioDTO.getName());
-        return ResponseEntity.ok(portfolio);
-    }
+	@PostMapping ("/createPortfolio")
+	public ResponseEntity<String> createPortfolio (@Valid @RequestBody PortfolioDTO portfolioDTO) {
+		Portfolio portfolio = portfolioService.createPortfolio(portfolioDTO.getUserId(), portfolioDTO.getName());
 
-    @DeleteMapping("/{portfolioId}")
-    public ResponseEntity<Void> deletePortfolio(@PathVariable Long portfolioId) {
-        portfolioService.deletePortfolio(portfolioId);
-        return ResponseEntity.noContent().build();
-    }
+		String successMessage = "{\"message\": \"Portfolio created successfully\"}";
 
-    @GetMapping("/user/{userId}")
-    public ResponseEntity<List<Portfolio>> getPortfoliosByUser(@PathVariable Long userId) {
-        List<Portfolio> portfolios = portfolioService.getUserPortfolios(userId);
-        return ResponseEntity.ok(portfolios);
-    }
+		return ResponseEntity.ok(successMessage);
+	}
 
-    @GetMapping("/{userId}/{portfolioId}")
-    public ResponseEntity<Portfolio> getPortfolioByUserAndId(@PathVariable Long userId, @PathVariable Long portfolioId) {
-        Portfolio portfolio = portfolioService.getPortfolioByUserAndId(userId, portfolioId);
-        return ResponseEntity.ok(portfolio);
-    }
+
+	@DeleteMapping ("/{portfolioId}")
+	public ResponseEntity<Void> deletePortfolio (@PathVariable Long portfolioId) {
+		portfolioService.deletePortfolio(portfolioId);
+		return ResponseEntity.noContent().build();
+	}
+
+	@GetMapping ("/user/{userId}")
+	public ResponseEntity<List<PortfolioDTO>> getPortfoliosByUser (@PathVariable Long userId) {
+		List<PortfolioDTO> portfolioDTOs = portfolioService.getUserPortfolios(userId);
+		return ResponseEntity.ok(portfolioDTOs);
+	}
+
+	@GetMapping ("/{userId}/{portfolioId}")
+	public ResponseEntity<PortfolioDTO> º (@PathVariable Long userId, @PathVariable Long portfolioId) {
+		PortfolioDTO portfolioDTO = portfolioService.getPortfolioByUserAndId(userId, portfolioId);
+		return ResponseEntity.ok(portfolioDTO);
+	}
 }

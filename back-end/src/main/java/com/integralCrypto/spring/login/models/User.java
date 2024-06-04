@@ -1,5 +1,7 @@
 package com.integralCrypto.spring.login.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.integralCrypto.spring.favoriteCoin.models.FavoriteCoin;
 import com.integralCrypto.spring.portfolio.models.*;
 

@@ -23,15 +23,16 @@ public class OHLCApiExternalService {
 	private String url;
 
 	public static String pair;
-	
-	private String interval="15m";
+
+	@Value("${ohlc.timeframe}")
+	private String interval;
 
 	@Autowired
 	public OHLCApiExternalService(@Qualifier("restTemplateOHLC") RestTemplate restTemplate) {
 		this.restTemplate = restTemplate;
 	}
 
-	public String getOHLCByCoin(String symbol, String timestamp) {
+	public String getOHLCByCoin(String symbol, Long timestamp) {
 		pair = "USDT";
 		String fullUrl = url + "/spot/candlesticks?currency_pair=" + symbol + "_" + pair;
 		fullUrl += "&interval="+interval;

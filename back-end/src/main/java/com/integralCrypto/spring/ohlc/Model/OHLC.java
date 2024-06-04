@@ -18,7 +18,7 @@ public class OHLC {
 	private Coin coin;
 
 	@Column
-	private String timestamp;
+	private Long  timestamp;
 
 	@Column(precision = 38, scale = 18)
 	private BigDecimal open;
@@ -42,7 +42,7 @@ public class OHLC {
 	public OHLC () {
 	}
 
-	public OHLC (Long id, Coin coin, String timestamp, BigDecimal open, BigDecimal high, BigDecimal low, BigDecimal close, BigDecimal volume,String pair) {
+	public OHLC (Long id, Coin coin, Long  timestamp, BigDecimal open, BigDecimal high, BigDecimal low, BigDecimal close, BigDecimal volume,String pair) {
 		this.id = id;
 		this.coin = coin;
 		this.timestamp = timestamp;
@@ -70,11 +70,11 @@ public class OHLC {
 		this.coin = coin;
 	}
 
-	public String getTimestamp () {
+	public Long  getTimestamp () {
 		return timestamp;
 	}
 
-	public void setTimestamp (String timestamp) {
+	public void setTimestamp (Long  timestamp) {
 		this.timestamp = timestamp;
 	}
 

@@ -1,5 +1,6 @@
 package com.integralCrypto.spring.portfolio.services;
 
+import com.integralCrypto.spring.portfolio.dto.PortfolioDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +10,7 @@ import com.integralCrypto.spring.login.repository.UserRepository;
 import com.integralCrypto.spring.portfolio.models.Portfolio;
 import com.integralCrypto.spring.portfolio.repository.PortfolioRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -37,14 +39,25 @@ public class PortfolioService {
 		portfolioRepository.delete(portfolio);
 	}
 
-	public List<Portfolio> getUserPortfolios (Long userId) {
+	public List<PortfolioDTO> getUserPortfolios(Long userId) {
 		User user = userRepository.findById(userId)
 				.orElseThrow(() -> new ResourceNotFoundException("Invalid user ID"));
 
-		return portfolioRepository.findByUser(user);
+		List<Portfolio> portfolios = portfolioRepository.findByUser(user);
+		List<PortfolioDTO> portfolioDTOs = new ArrayList<>();
+
+		for (Portfolio portfolio : portfolios) {
+			PortfolioDTO portfolioDTO = new PortfolioDTO();
+			portfolioDTO.setUserId(portfolio.getUser().getId());
+			portfolioDTO.setName(portfolio.getName());
+
+			portfolioDTOs.add(portfolioDTO);
+		}
+
+		return portfolioDTOs;
 	}
 
-	public Portfolio getPortfolioByUserAndId (Long userId, Long portfolioId) {
+	public PortfolioDTO getPortfolioByUserAndId(Long userId, Long portfolioId) {
 		User user = userRepository.findById(userId)
 				.orElseThrow(() -> new ResourceNotFoundException("Invalid user ID"));
 
@@ -52,6 +65,10 @@ public class PortfolioService {
 				.orElseThrow(() -> new ResourceNotFoundException("Portfolio not found with id " + portfolioId + " for " +
 						"user " + userId));
 
-		return portfolio;
+		PortfolioDTO portfolioDTO = new PortfolioDTO();
+		portfolioDTO.setUserId(portfolio.getUser().getId());
+		portfolioDTO.setName(portfolio.getName());
+
+		return portfolioDTO;
 	}
 }

@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface OHLCRepository  extends JpaRepository<OHLC, Long> {
 
     
-    boolean existsByTimestampAndCoin(String timestamp, Coin coin);
+    boolean existsByTimestampAndCoin(Long timestamp, Coin coin);
     
     OHLC findFirstByCoinOrderByTimestampDesc(Coin coin);
 }
