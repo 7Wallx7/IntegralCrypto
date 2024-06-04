@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.time.temporal.ChronoUnit;
 import java.time.Instant;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.integralCrypto.spring.transaction.dto.TransactionDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,38 +30,40 @@ public class TransactionService {
 	@Autowired
 	private CoinRepository coinRepository;
 
-	public Transaction registerBuyTransaction (Long portfolioId, Long coinId, BigDecimal amount, BigDecimal price) {
-		Portfolio portfolio = portfolioRepository.findById(portfolioId)
+	public TransactionDTO registerBuyTransaction (TransactionDTO transactionDTO) {
+		Portfolio portfolio = portfolioRepository.findById(transactionDTO.getPortfolioId())
 				.orElseThrow(() -> new ResourceNotFoundException("Invalid portfolio ID"));
-		Coin coin = coinRepository.findById(coinId)
+		Coin coin = coinRepository.findById(transactionDTO.getCoinId())
 				.orElseThrow(() -> new ResourceNotFoundException("Invalid coin ID"));
 
 		Transaction transaction = new Transaction();
 		transaction.setPortfolio(portfolio);
 		transaction.setCoin(coin);
 		transaction.setType(TransactionType.BUY);
-		transaction.setAmount(amount);
-		transaction.setPrice(price);
+		transaction.setAmount(transactionDTO.getAmount());
+		transaction.setPrice(transactionDTO.getPrice());
 		transaction.setTimestamp(getCurrentUnixTimestampInMinutes());
 
-		return transactionRepository.save(transaction);
+		Transaction savedTransaction = transactionRepository.save(transaction);
+		return toDTO(savedTransaction);
 	}
 
-	public Transaction registerSellTransaction (Long portfolioId, Long coinId, BigDecimal amount, BigDecimal price) {
-		Portfolio portfolio = portfolioRepository.findById(portfolioId)
+	public TransactionDTO registerSellTransaction(TransactionDTO transactionDTO) {
+		Portfolio portfolio = portfolioRepository.findById(transactionDTO.getPortfolioId())
 				.orElseThrow(() -> new ResourceNotFoundException("Invalid portfolio ID"));
-		Coin coin = coinRepository.findById(coinId)
+		Coin coin = coinRepository.findById(transactionDTO.getCoinId())
 				.orElseThrow(() -> new ResourceNotFoundException("Invalid coin ID"));
 
 		Transaction transaction = new Transaction();
 		transaction.setPortfolio(portfolio);
 		transaction.setCoin(coin);
 		transaction.setType(TransactionType.SELL);
-		transaction.setAmount(amount);
-		transaction.setPrice(price);
+		transaction.setAmount(transactionDTO.getAmount());
+		transaction.setPrice(transactionDTO.getPrice());
 		transaction.setTimestamp(getCurrentUnixTimestampInMinutes());
 
-		return transactionRepository.save(transaction);
+		Transaction savedTransaction = transactionRepository.save(transaction);
+		return toDTO(savedTransaction); // Convert to DTO before returning
 	}
 
 	public void deleteTransaction (Long transactionId) {
@@ -69,15 +72,18 @@ public class TransactionService {
 		transactionRepository.delete(transaction);
 	}
 
-	public List<Transaction> getTransactionsByPortfolio (Long portfolioId) {
+	public List<TransactionDTO> getTransactionsByPortfolio(Long portfolioId) {
 		Portfolio portfolio = portfolioRepository.findById(portfolioId)
 				.orElseThrow(() -> new ResourceNotFoundException("Invalid portfolio ID"));
 
 		List<Transaction> transactions = transactionRepository.findByPortfolio(portfolio);
-		return transactions;
+		List<TransactionDTO> transactionDTOs = transactions.stream()
+				.map(this::toDTO)
+				.collect(Collectors.toList());
+		return transactionDTOs;
 	}
 
-	public Transaction updateTransaction (Long transactionId, TransactionDTO transactionDTO) {
+	public TransactionDTO updateTransaction(Long transactionId, TransactionDTO transactionDTO) {
 		Transaction transaction = transactionRepository.findById(transactionId)
 				.orElseThrow(() -> new ResourceNotFoundException("Transaction not found"));
 
@@ -90,12 +96,23 @@ public class TransactionService {
 		transaction.setCoin(coin);
 		transaction.setAmount(transactionDTO.getAmount());
 		transaction.setPrice(transactionDTO.getPrice());
-		return transactionRepository.save(transaction);
+
+		Transaction updatedTransaction = transactionRepository.save(transaction);
+		return toDTO(updatedTransaction); // Convert to DTO before returning
 	}
 
 	public long getCurrentUnixTimestampInMinutes () {
 		Instant instant = Instant.now();
 		return instant.truncatedTo(ChronoUnit.MINUTES).getEpochSecond();
+	}
+
+	public TransactionDTO toDTO (Transaction transaction) {
+		TransactionDTO transactionDTO = new TransactionDTO();
+		transactionDTO.setPortfolioId(transaction.getPortfolio().getId());
+		transactionDTO.setCoinId(transaction.getCoin().getId());
+		transactionDTO.setAmount(transaction.getAmount());
+		transactionDTO.setPrice(transaction.getPrice());
+		return transactionDTO;
 	}
 }
 

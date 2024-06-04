@@ -14,44 +14,38 @@ import jakarta.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping ("/transactions")
+@RequestMapping("/transactions")
 @Validated
 public class TransactionController {
 
 	@Autowired
-	private TransactionService transactionService;	
+	private TransactionService transactionService;
 
-	@PostMapping ("/buy")
-	public ResponseEntity<Transaction> registerBuyTransaction (@Valid @RequestBody TransactionDTO transactionDTO) {
-		Transaction transaction = transactionService.registerBuyTransaction(transactionDTO.getPortfolioId(),
-				transactionDTO.getCoinId(), transactionDTO.getAmount(), transactionDTO.getPrice());
-		return ResponseEntity.ok(transaction);
+	@PostMapping("/buy")
+	public ResponseEntity<TransactionDTO> registerBuyTransaction(@Valid @RequestBody TransactionDTO transactionDTO) {
+		return ResponseEntity.ok(transactionService.registerBuyTransaction(transactionDTO));
 	}
 
-	@PostMapping ("/sell")
-	public ResponseEntity<Transaction> registerSellTransaction (@Valid @RequestBody TransactionDTO transactionDTO) {
-		Transaction transaction = transactionService.registerSellTransaction(transactionDTO.getPortfolioId(),
-				transactionDTO.getCoinId(), transactionDTO.getAmount(), transactionDTO.getPrice());
-		return ResponseEntity.ok(transaction);
+	@PostMapping("/sell")
+	public ResponseEntity<TransactionDTO> registerSellTransaction(@Valid @RequestBody TransactionDTO transactionDTO) {
+		return ResponseEntity.ok(transactionService.registerSellTransaction(transactionDTO));
 	}
 
-	@GetMapping ("/portfolio/{portfolioId}")
-	public ResponseEntity<List<Transaction>> getTransactionsByPortfolio (@PathVariable Long portfolioId) {
-		List<Transaction> transactions = transactionService.getTransactionsByPortfolio(portfolioId);
-		return ResponseEntity.ok(transactions);
+	@GetMapping("/portfolio/{portfolioId}")
+	public ResponseEntity<List<TransactionDTO>> getTransactionsByPortfolio(@PathVariable Long portfolioId) {
+		return ResponseEntity.ok(transactionService.getTransactionsByPortfolio(portfolioId));
 	}
 
-	@DeleteMapping ("/{transactionId}")
-	public ResponseEntity<Void> deleteTransaction (@PathVariable Long transactionId) {
+	@DeleteMapping("/{transactionId}")
+	public ResponseEntity<Void> deleteTransaction(@PathVariable Long transactionId) {
 		transactionService.deleteTransaction(transactionId);
 		return ResponseEntity.noContent().build();
 	}
 
 	@PutMapping("/{transactionId}")
-	public ResponseEntity<Transaction> updateTransaction(
+	public ResponseEntity<TransactionDTO> updateTransaction(
 			@PathVariable Long transactionId,
 			@Valid @RequestBody TransactionDTO transactionDTO) {
-		Transaction updatedTransaction = transactionService.updateTransaction(transactionId, transactionDTO);
-		return ResponseEntity.ok(updatedTransaction);
+		return ResponseEntity.ok(transactionService.updateTransaction(transactionId, transactionDTO));
 	}
-}	
+}
