@@ -1,5 +1,6 @@
 package com.integralCrypto.spring.portfolio.controllers;
 
+import com.integralCrypto.spring.login.payload.response.MessageResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -29,12 +30,12 @@ public class PortfolioController {
 	private PortfolioService portfolioService;
 
 	@PostMapping ("/createPortfolio")
-	public ResponseEntity<String> createPortfolio (@Valid @RequestBody PortfolioDTO portfolioDTO) {
+	public ResponseEntity<?> createPortfolio (@Valid @RequestBody PortfolioDTO portfolioDTO) {
 		Portfolio portfolio = portfolioService.createPortfolio(portfolioDTO.getUserId(), portfolioDTO.getName());
 
 		String successMessage = "{\"message\": \"Portfolio created successfully\"}";
 
-		return ResponseEntity.ok(successMessage);
+		return ResponseEntity.ok(new MessageResponse("Portfolio registered successfully!"));
 	}
 
 
