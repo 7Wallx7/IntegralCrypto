@@ -32,8 +32,8 @@ import com.integralCrypto.spring.login.payload.response.MessageResponse;
 import com.integralCrypto.spring.login.payload.response.UserInfoResponse;
 import com.integralCrypto.spring.login.repository.RoleRepository;
 import com.integralCrypto.spring.login.repository.UserRepository;
-import com.integralCrypto.spring.login.security.jwt.JwtUtils;
-import com.integralCrypto.spring.login.security.services.UserDetailsImpl;
+import com.integralCrypto.spring.security.jwt.JwtUtils;
+import com.integralCrypto.spring.security.services.UserDetailsImpl;
 
 
 //for Angular Client (withCredentials)

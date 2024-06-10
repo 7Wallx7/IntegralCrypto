@@ -1,12 +1,10 @@
-package com.integralCrypto.spring.login.security.jwt;
+package com.integralCrypto.spring.security.jwt;
 
-import java.io.IOException;
-
+import com.integralCrypto.spring.security.services.UserDetailsServiceImpl;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +14,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.integralCrypto.spring.login.security.services.UserDetailsServiceImpl;
+import java.io.IOException;
 
 public class AuthTokenFilter extends OncePerRequestFilter {
   @Autowired
@@ -50,7 +48,6 @@ public class AuthTokenFilter extends OncePerRequestFilter {
           logger.error("Cannot set user authentication: {}", e);
       }
 
-      // Continuar con el siguiente filtro en la cadena
       filterChain.doFilter(request, response);
   }
 

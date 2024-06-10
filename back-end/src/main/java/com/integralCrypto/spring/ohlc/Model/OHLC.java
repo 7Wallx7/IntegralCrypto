@@ -3,6 +3,7 @@ package com.integralCrypto.spring.ohlc.Model;
 import com.integralCrypto.spring.coin.models.Coin;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
 
@@ -14,29 +15,36 @@ public class OHLC {
 	private Long id;
 
 	@ManyToOne
+	@NotNull
 	@JoinColumn (name = "coin_id", nullable = false)
 	private Coin coin;
 
 	@Column
+	@NotNull
 	private Long  timestamp;
 
 	@Column(precision = 38, scale = 18)
+	@NotNull
 	private BigDecimal open;
 
 	@Column(precision = 38, scale = 18)
+	@NotNull
 	private BigDecimal high;
 
 	@Column(precision = 38, scale = 18)
+	@NotNull
 	private BigDecimal low;
 
 	@Column(precision = 38, scale = 18)
+	@NotNull
 	private BigDecimal close;
 
 	@Column(precision = 38, scale = 18)
+	@NotNull
 	private BigDecimal volume;
 	
 	@Column
-	@NotEmpty
+	@NotNull
 	String pair;
 
 	public OHLC () {

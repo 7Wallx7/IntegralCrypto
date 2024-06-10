@@ -6,22 +6,23 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 @Entity
-@Table (name="coin")		
+@Table (name = "coin")
 public class Coin {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(unique = true)
+	@Column (unique = true)
 	@Size (min = 1, max = 15)
 	@NotBlank
 	private String symbol;
 
+
 	public Coin () {
 	}
 
-	public Coin (Long id,String symbol) {
+	public Coin (Long id, String symbol) {
 		this.id = id;
 		this.symbol = symbol;
 	}
@@ -34,8 +35,6 @@ public class Coin {
 		this.id = id;
 	}
 
-
-
 	public String getSymbol () {
 		return symbol;
 	}
@@ -43,5 +42,6 @@ public class Coin {
 	public void setSymbol (String symbol) {
 		this.symbol = symbol;
 	}
+
 
 }

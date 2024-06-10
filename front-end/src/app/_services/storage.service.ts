@@ -11,10 +11,22 @@ export class StorageService {
   clean(): void {
     window.sessionStorage.clear();
   }
+  public clearStorage(): void {
+    window.sessionStorage.clear();
+  }
 
   public saveUser(user: any): void {
     window.sessionStorage.removeItem(USER_KEY);
     window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
+  }
+
+  public saveToken(token: string): void {
+    window.sessionStorage.removeItem(USER_KEY);
+    window.sessionStorage.setItem(USER_KEY, token);
+  }
+
+  public getToken(): string | null {
+    return window.sessionStorage.getItem(USER_KEY);
   }
 
   public getUser(): any {
@@ -31,7 +43,6 @@ export class StorageService {
     if (user) {
       return true;
     }
-
     return false;
   }
 }

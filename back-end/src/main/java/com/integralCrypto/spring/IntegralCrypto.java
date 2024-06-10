@@ -1,5 +1,6 @@
 package com.integralCrypto.spring;
 
+import com.integralCrypto.spring.coindetails.services.external.CoinDetailDataProcessService;
 import org.json.JSONException;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -21,11 +22,13 @@ public class IntegralCrypto {
     }
 
     @Bean
-    public ApplicationRunner initialize(ListSymbolApiExternalService apiService, ListSymbolDataProcessService processApiData, OHLCDataProcessService ohlcdata) {
+    public ApplicationRunner initialize(ListSymbolApiExternalService apiService, ListSymbolDataProcessService processApiData, OHLCDataProcessService ohlcdata,
+                                        CoinDetailDataProcessService coinDetailProcess) {
         return args -> {
             // Llama al método para ejecutar el proceso de datos de la API inmediatamente
-            executeApiDataProcessing(apiService, processApiData);
-            ohlcdata.processApiDataPeriodically();
+            //executeApiDataProcessing(apiService, processApiData);
+            //ohlcdata.processApiDataPeriodically();
+            //coinDetailProcess.processApiDataPeriodically();
         };
     }
 

@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Portfolio List</h2>
+  <button class="btn btn-primary" (click)="getPortfolios()">Get Portfolios</button>
+  <ul class="list-group">
+    <li *ngFor="let portfolio of portfolios" class="list-group-item">
+      {{ portfolio.name }}
+    </li>
+  </ul>
+</div>

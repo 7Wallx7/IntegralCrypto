@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Portfolio Detail</h2>
+  <div class="form-group">
+    <label for="portfolioId">Portfolio ID</label>
+    <input type="number" id="portfolioId" [(ngModel)]="portfolioId" class="form-control">
+  </div>
+  <button class="btn btn-primary" (click)="getPortfolio()">Get Portfolio</button>
+  <div *ngIf="portfolio">
+    <h3>{{ portfolio.name }}</h3>
+    <p>ID: {{ portfolio.id }}</p>
+  </div>
+</div>

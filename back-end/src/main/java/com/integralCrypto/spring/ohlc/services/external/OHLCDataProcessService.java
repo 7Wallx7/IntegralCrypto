@@ -43,7 +43,7 @@ public class OHLCDataProcessService {
     }
 
     // Periodically every 15 minutes
-    @Scheduled(cron = "0 */15 * * * *")
+   // @Scheduled(cron = "0 */15 * * * *")
     public void processApiDataPeriodically() {
         try {
             List<Coin> list = coinRespository.findAll();

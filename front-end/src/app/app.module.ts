@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -14,6 +16,10 @@ import { BoardModeratorComponent } from './board-moderator/board-moderator.compo
 import { BoardUserComponent } from './board-user/board-user.component';
 
 import { httpInterceptorProviders } from './_helpers/http.interceptor';
+import { PortfolioListComponent } from './components/portfolio/portfolio-list/portfolio-list.component';
+import { PortfolioDetailComponent } from './components/portfolio/portfolio-detail/portfolio-detail.component';
+import { CreatePortfolioComponent } from './components/portfolio/create-portfolio/create-portfolio.component';
+import { DeletePortfolioComponent } from './components/portfolio/delete-portfolio/delete-portfolio.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +30,18 @@ import { httpInterceptorProviders } from './_helpers/http.interceptor';
     ProfileComponent,
     BoardAdminComponent,
     BoardModeratorComponent,
-    BoardUserComponent
+    BoardUserComponent,
+    PortfolioListComponent,
+    PortfolioDetailComponent,
+    CreatePortfolioComponent,
+    DeletePortfolioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule 
   ],
   providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
